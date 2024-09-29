@@ -10,6 +10,7 @@ import net.minecraft.loot.context.LootContextTypes;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.hit.HitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
@@ -44,7 +45,7 @@ public class PickUpAppleGoal extends Goal {
     public List<ItemStack> dropLoot() {
         BarklingVariant variant = getVariant();
 
-        RegistryKey<LootTable> lootTableIdentifier;
+        Identifier lootTableIdentifier;
         switch (variant) {
             case OAK:
             case OAK_MOSS:
@@ -123,7 +124,7 @@ public class PickUpAppleGoal extends Goal {
 
         LootTable lootTable = Objects.requireNonNull(
                 Objects.requireNonNull(barkling.getWorld().getServer())
-                        .getReloadableRegistries()
+                        .getLootManager()
                         .getLootTable(lootTableIdentifier)
         );
 

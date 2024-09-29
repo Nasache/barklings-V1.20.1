@@ -8,8 +8,8 @@ import net.minecraft.util.math.BlockPos;
 import net.nathan.barklings.block.entity.ModHangingSignBlockEntity;
 
 public class ModHangingSignBlock extends HangingSignBlock {
-    public ModHangingSignBlock(WoodType woodType, Settings settings) {
-        super(woodType, settings);
+    public ModHangingSignBlock(Settings settings, WoodType woodType) {
+        super(settings, woodType);
     }
 
     @Override

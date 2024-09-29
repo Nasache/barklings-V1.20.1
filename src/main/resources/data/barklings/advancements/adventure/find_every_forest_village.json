@@ -1,0 +1,128 @@
+{
+  "parent": "barklings:adventure/find_forest_village",
+  "criteria": {
+    "oak_village": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "location": {
+          "structures": [
+            "barklings:oak_village"
+          ]
+        }
+      }
+    },
+    "birch_village": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "location": {
+          "structures": [
+            "barklings:birch_village"
+          ]
+        }
+      }
+    },
+    "spruce_village": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "location": {
+          "structures": [
+            "barklings:spruce_village"
+          ]
+        }
+      }
+    },
+    "cherry_village": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "location": {
+          "structures": [
+            "barklings:cherry_village"
+          ]
+        }
+      }
+    },
+    "jungle_village": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "location": {
+          "structures": [
+            "barklings:jungle_village"
+          ]
+        }
+      }
+    },
+    "mangrove_village": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "location": {
+          "structures": [
+            "barklings:mangrove_village"
+          ]
+        }
+      }
+    },
+    "acacia_village": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "location": {
+          "structures": [
+            "barklings:acacia_village"
+          ]
+        }
+      }
+    },
+    "dark_oak_village": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "location": {
+          "structures": [
+            "barklings:dark_oak_village"
+          ]
+        }
+      }
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.barklings.find_every_forest_village.description"
+    },
+    "frame": "challenge",
+    "icon": {
+      "count": 1,
+      "item": "minecraft:oak_sapling"
+    },
+    "title": {
+      "translate": "advancements.barklings.find_every_forest_village.title"
+    }
+  },
+  "requirements": [
+    [
+      "oak_village"
+    ],
+    [
+      "birch_village"
+    ],
+    [
+      "spruce_village"
+    ],
+    [
+      "jungle_village"
+    ],
+    [
+      "dark_oak_village"
+    ],
+    [
+      "acacia_village"
+    ],
+    [
+      "cherry_village"
+    ],
+    [
+      "mangrove_village"
+    ]
+  ],
+  "rewards": {
+    "experience": 100
+  },
+  "sends_telemetry_event": true
+}

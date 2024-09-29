@@ -1,6 +1,5 @@
 package net.nathan.barklings.block.custom;
 
-import com.mojang.serialization.MapCodec;
 import net.minecraft.block.*;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
@@ -17,7 +16,6 @@ import net.minecraft.state.property.Properties;
 import net.minecraft.state.property.Property;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
-import net.minecraft.util.ItemActionResult;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
@@ -41,11 +39,6 @@ public class GrapeBush extends PlantBlock implements Fertilizable {
     public GrapeBush(Settings settings) {
         super(settings);
         this.setDefaultState((BlockState)((BlockState)this.stateManager.getDefaultState()).with(AGE, 0));
-    }
-
-    @Override
-    protected MapCodec<? extends PlantBlock> getCodec() {
-        return null;
     }
 
     public ItemStack getPickStack(BlockView world, BlockPos pos, BlockState state) {
@@ -80,16 +73,12 @@ public class GrapeBush extends PlantBlock implements Fertilizable {
         }
     }
 
-    protected ItemActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         int i = (Integer)state.get(AGE);
         boolean bl = i == 3;
-        return !bl && stack.isOf(Items.BONE_MEAL) ? ItemActionResult.SKIP_DEFAULT_BLOCK_INTERACTION : super.onUseWithItem(stack, state, world, pos, player, hand, hit);
-    }
-
-    protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
-        int i = (Integer)state.get(AGE);
-        boolean bl = i == 3;
-        if (i > 1) {
+        if (!bl && player.getStackInHand(hand).isOf(Items.BONE_MEAL)) {
+            return ActionResult.PASS;
+        } else if (i > 1) {
             int j = 1 + world.random.nextInt(2);
             dropStack(world, pos, new ItemStack(ModItems.GRAPES, j + (bl ? 1 : 0)));
             world.playSound((PlayerEntity)null, pos, SoundEvents.BLOCK_SWEET_BERRY_BUSH_PICK_BERRIES, SoundCategory.BLOCKS, 1.0F, 0.8F + world.random.nextFloat() * 0.4F);
@@ -98,7 +87,7 @@ public class GrapeBush extends PlantBlock implements Fertilizable {
             world.emitGameEvent(GameEvent.BLOCK_CHANGE, pos, Emitter.of(player, blockState));
             return ActionResult.success(world.isClient);
         } else {
-            return super.onUse(state, world, pos, player, hit);
+            return super.onUse(state, world, pos, player, hand, hit);
         }
     }
 
@@ -106,7 +95,8 @@ public class GrapeBush extends PlantBlock implements Fertilizable {
         builder.add(new Property[]{AGE});
     }
 
-    public boolean isFertilizable(WorldView world, BlockPos pos, BlockState state) {
+    @Override
+    public boolean isFertilizable(WorldView world, BlockPos pos, BlockState state, boolean isClient) {
         return (Integer)state.get(AGE) < 3;
     }
 

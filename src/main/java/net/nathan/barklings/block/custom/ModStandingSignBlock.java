@@ -8,8 +8,8 @@ import net.minecraft.util.math.BlockPos;
 import net.nathan.barklings.block.entity.ModSignBlockEntity;
 
 public class ModStandingSignBlock extends SignBlock {
-    public ModStandingSignBlock(WoodType woodType, Settings settings) {
-        super(woodType, settings);
+    public ModStandingSignBlock(Settings settings, WoodType woodType) {
+        super(settings, woodType);
     }
 
     @Override

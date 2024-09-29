@@ -35,7 +35,7 @@ public class ModRegistries {
         registry.add(ModItems.GILDED_OAK_CHEST_BOAT, 300);
         registry.add(ModItems.GILDED_OAK_SIGN, 300);
         registry.add(ModItems.GILDED_OAK_HANGING_SIGN, 300);
-        registry.add(ModItems.GILDED_OAK_SAPLING, 300);
+        registry.add(ModBlocks.GILDED_OAK_SAPLING, 300);
     }
 
     private static void registerModCompostables () {

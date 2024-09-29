@@ -1,5 +1,6 @@
 package net.nathan.barklings.block.entity;
 
+import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -10,12 +11,12 @@ import net.nathan.barklings.block.ModBlocks;
 public class ModBlockEntities {
     public static final BlockEntityType<ModSignBlockEntity> MOD_SIGN_BLOCK_ENTITY = Registry.register(Registries.BLOCK_ENTITY_TYPE,
             Identifier.of(BarklingsMain.MOD_ID, "mod_sign_entity"),
-            BlockEntityType.Builder.create(ModSignBlockEntity::new,
+            FabricBlockEntityTypeBuilder.create(ModSignBlockEntity::new,
                     ModBlocks.GILDED_OAK_SIGN, ModBlocks.GILDED_OAK_WALL_SIGN).build());
 
     public static final BlockEntityType<ModHangingSignBlockEntity> MOD_HANGING_SIGN_BLOCK_ENTITY = Registry.register(Registries.BLOCK_ENTITY_TYPE,
             Identifier.of(BarklingsMain.MOD_ID, "mod_hanging_sign_entity"),
-            BlockEntityType.Builder.create(ModHangingSignBlockEntity::new,
+            FabricBlockEntityTypeBuilder.create(ModHangingSignBlockEntity::new,
                     ModBlocks.GILDED_OAK_HANGING_SIGN, ModBlocks.GILDED_OAK_WALL_HANGING_SIGN).build());
 
 

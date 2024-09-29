@@ -59,9 +59,5 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         ModBlocks.GILDED_OAK_WOOD,
                         ModBlocks.STRIPPED_GILDED_OAK_LOG,
                         ModBlocks.STRIPPED_GILDED_OAK_WOOD);
-
-        getOrCreateTagBuilder(ModTags.Blocks.GILDED_OAK_LOGS)
-                .add(ModBlocks.GILDED_OAK_LOG, ModBlocks.GILDED_OAK_WOOD, ModBlocks.STRIPPED_GILDED_OAK_LOG, ModBlocks.STRIPPED_GILDED_OAK_WOOD);
-
     }
 }

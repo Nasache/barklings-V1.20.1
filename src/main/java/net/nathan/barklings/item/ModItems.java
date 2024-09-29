@@ -1,6 +1,7 @@
 package net.nathan.barklings.item;
 
 import com.terraformersmc.terraform.boat.api.item.TerraformBoatItemHelper;
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -43,14 +44,10 @@ public class ModItems {
 
 
     public static final Item HIDDEN_VOICES_MUSIC_DISC = registerItem("hidden_voices_music_disc",
-            new Item(new Item.Settings().jukeboxPlayable(ModSounds.HIDDEN_VOICES_KEY).maxCount(1)));
-
+            new MusicDiscItem(9, ModSounds.HIDDEN_VOICES, new FabricItemSettings().maxCount(1), 88));
 
     public static final Item BARKLING_SPAWN_EGG = registerItem("barkling_spawn_egg",
             new SpawnEggItem(ModEntities.BARKLING, 0x745a36, 0xc29d62, new Item.Settings()));
-
-    public static final Item GILDED_OAK_SAPLING = registerItem("gilded_oak_sapling",
-            new AliasedBlockItem(ModBlocks.GILDED_OAK_SAPLING, new Item.Settings()));
 
     public static final Item GILDED_OAK_SIGN = registerItem("gilded_oak_sign",
             new SignItem(new Item.Settings().maxCount(16), ModBlocks.GILDED_OAK_SIGN, ModBlocks.GILDED_OAK_WALL_SIGN));

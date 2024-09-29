@@ -19,7 +19,7 @@
     "frame": "goal",
     "icon": {
       "count": 1,
-      "id": "barklings:gilded_oak_sapling"
+      "item": "barklings:gilded_oak_sapling"
     },
     "title": {
       "translate": "advancements.barklings.gilded_oak_sapling.title"

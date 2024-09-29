@@ -20,11 +20,14 @@ import net.minecraft.loot.context.LootContextParameterSet;
 import net.minecraft.loot.context.LootContextParameters;
 import net.minecraft.loot.context.LootContextTypes;
 import net.minecraft.nbt.NbtCompound;
+import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.entry.RegistryEntry;
+import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.*;
@@ -58,9 +61,8 @@ public class BarklingEntity extends AnimalEntity {
         this.goalSelector.add(1, new EscapeDangerGoal(this, 2.0));
         this.goalSelector.add(2, new AnimalMateGoal(this, 1.0));
         this.goalSelector.add(3, new PickUpAppleGoal(this, 1.25));
-        this.goalSelector.add(4, new TemptGoal(this, 1.25, (stack) -> {
-            return stack.isIn(ModTags.Items.FRUIT) || stack.isOf(Items.GOLDEN_APPLE);
-        }, false));
+        this.goalSelector.add(4, new TemptGoal(this, 1.25, Ingredient.ofItems(Items.GOLDEN_APPLE), false));
+        this.goalSelector.add(4, new TemptGoal(this, 1.25, Ingredient.fromTag(ModTags.Items.FRUIT), false));
         this.goalSelector.add(5, new FollowParentGoal(this, 1.25));
         this.goalSelector.add(6, new WanderAroundFarGoal(this, 1.0));
         this.goalSelector.add(7, new LookAtEntityGoal(this, PlayerEntity.class, 6.0F));
@@ -110,9 +112,9 @@ public class BarklingEntity extends AnimalEntity {
     }
 
     @Override
-    protected void initDataTracker(DataTracker.Builder builder) {
-        super.initDataTracker(builder);
-        builder.add(DATA_ID_TYPE_VARIANT, 0);
+    protected void initDataTracker() {
+        super.initDataTracker();
+        this.dataTracker.startTracking(DATA_ID_TYPE_VARIANT, 0);
     }
 
     int getTypeVariant() {
@@ -128,14 +130,15 @@ public class BarklingEntity extends AnimalEntity {
     }
 
     @Override
-    public EntityData initialize(ServerWorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason, @Nullable EntityData entityData) {
+    public EntityData initialize(ServerWorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason,
+                                 @Nullable EntityData entityData, @Nullable NbtCompound entityNbt) {
         RegistryEntry<Biome> registryEntry = world.getBiome(this.getBlockPos());
         Random random = world.getRandom();
 
         BarklingVariant variant = BarklingVariantCalculator.getVariantForBiome(registryEntry, random);
 
         setVariant(variant);
-        return super.initialize(world, difficulty, spawnReason, entityData);
+        return super.initialize(world, difficulty, spawnReason, entityData, entityNbt);
     }
 
     @Override
@@ -152,7 +155,7 @@ public class BarklingEntity extends AnimalEntity {
 
     private List<ItemStack> getDropForVariant() {
         BarklingVariant variant = getVariant();
-        RegistryKey<LootTable> lootTableIdentifier;
+        Identifier lootTableIdentifier;
 
         switch (variant) {
             case OAK:
@@ -232,7 +235,7 @@ public class BarklingEntity extends AnimalEntity {
 
         LootTable lootTable = Objects.requireNonNull(
                 Objects.requireNonNull(this.getWorld().getServer())
-                        .getReloadableRegistries()
+                        .getLootManager()
                         .getLootTable(lootTableIdentifier)
         );
 

@@ -15,9 +15,4 @@ public class ModSignBlockEntity extends SignBlockEntity {
     public BlockEntityType<?> getType() {
         return ModBlockEntities.MOD_SIGN_BLOCK_ENTITY;
     }
-
-    @Override
-    public boolean supports(BlockState state) {
-        return this.getType().supports(state);
-    }
 }

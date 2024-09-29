@@ -11,7 +11,7 @@ import net.minecraft.util.Identifier;
 import net.nathan.barklings.BarklingsMain;
 import net.nathan.barklings.block.custom.*;
 import net.nathan.barklings.util.ModWoodTypes;
-import net.nathan.barklings.world.tree.ModSaplingGenerators;
+import net.nathan.barklings.world.tree.GildedOakSaplingGenerator;
 
 public class ModBlocks {
 
@@ -36,17 +36,17 @@ public class ModBlocks {
     public static final Block GILDED_OAK_SLAB = registerBlock("gilded_oak_slab",
             new SlabBlock(AbstractBlock.Settings.copy(Blocks.OAK_SLAB)));
     public static final Block GILDED_OAK_BUTTON = registerBlock("gilded_oak_button",
-            new ButtonBlock(BlockSetType.OAK, 30, AbstractBlock.Settings.copy(Blocks.OAK_BUTTON)));
+            new ButtonBlock(AbstractBlock.Settings.copy(Blocks.OAK_BUTTON), BlockSetType.OAK, 30, true));
     public static final Block GILDED_OAK_PRESSURE_PLATE = registerBlock("gilded_oak_pressure_plate",
-            new PressurePlateBlock( BlockSetType.OAK, AbstractBlock.Settings.copy(Blocks.OAK_PRESSURE_PLATE)));
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, AbstractBlock.Settings.copy(Blocks.OAK_PRESSURE_PLATE), BlockSetType.OAK));
     public static final Block GILDED_OAK_FENCE = registerBlock("gilded_oak_fence",
             new FenceBlock(AbstractBlock.Settings.copy(Blocks.OAK_FENCE)));
     public static final Block GILDED_OAK_FENCE_GATE = registerBlock("gilded_oak_fence_gate",
-            new FenceGateBlock(WoodType.OAK, AbstractBlock.Settings.copy(Blocks.OAK_FENCE_GATE)));
+            new FenceGateBlock(AbstractBlock.Settings.copy(Blocks.OAK_FENCE_GATE), WoodType.OAK));
     public static final Block GILDED_OAK_DOOR = registerBlock("gilded_oak_door",
-            new DoorBlock(BlockSetType.OAK, AbstractBlock.Settings.copy(Blocks.OAK_DOOR)));
+            new DoorBlock(AbstractBlock.Settings.copy(Blocks.OAK_DOOR), BlockSetType.OAK));
     public static final Block GILDED_OAK_TRAPDOOR = registerBlock("gilded_oak_trapdoor",
-            new TrapdoorBlock(BlockSetType.OAK, AbstractBlock.Settings.copy(Blocks.OAK_TRAPDOOR)));
+            new TrapdoorBlock(AbstractBlock.Settings.copy(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
     public static final Block GILDED_OAK_LOG = registerBlock("gilded_oak_log",
             new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_LOG)));
     public static final Block GILDED_OAK_WOOD = registerBlock("gilded_oak_wood",
@@ -58,18 +58,18 @@ public class ModBlocks {
     public static final Block GILDED_OAK_LEAVES = registerBlock("gilded_oak_leaves",
             new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).mapColor(MapColor.GOLD)));
     public static final Block GILDED_OAK_SAPLING = registerBlock("gilded_oak_sapling",
-            new SaplingBlock(ModSaplingGenerators.GILDED_OAK, AbstractBlock.Settings.copy(Blocks.OAK_SAPLING).mapColor(MapColor.GOLD)));
+            new SaplingBlock(new GildedOakSaplingGenerator(), AbstractBlock.Settings.copy(Blocks.OAK_SAPLING).mapColor(MapColor.GOLD)));
     public static final Block POTTED_GILDED_OAK_SAPLING = registerBlockWithoutBlockItem("potted_gilded_oak_sapling",
             new FlowerPotBlock(GILDED_OAK_SAPLING, AbstractBlock.Settings.copy(Blocks.POTTED_OAK_SAPLING).mapColor(MapColor.GOLD)));
 
     public static final Block GILDED_OAK_SIGN = registerBlockWithoutBlockItem("gilded_oak_sign",
-            new ModStandingSignBlock(ModWoodTypes.GILDED_OAK, AbstractBlock.Settings.copy(Blocks.OAK_SIGN)));
+            new ModStandingSignBlock(AbstractBlock.Settings.copy(Blocks.OAK_SIGN), ModWoodTypes.GILDED_OAK));
     public static final Block GILDED_OAK_WALL_SIGN = registerBlockWithoutBlockItem("gilded_oak_wall_sign",
-            new ModWallSignBlock(ModWoodTypes.GILDED_OAK, AbstractBlock.Settings.copy(Blocks.OAK_WALL_SIGN)));
+            new ModWallSignBlock(AbstractBlock.Settings.copy(Blocks.OAK_WALL_SIGN), ModWoodTypes.GILDED_OAK));
     public static final Block GILDED_OAK_HANGING_SIGN = registerBlockWithoutBlockItem("gilded_oak_hanging_sign",
-            new ModHangingSignBlock(ModWoodTypes.GILDED_OAK, AbstractBlock.Settings.copy(Blocks.OAK_HANGING_SIGN)));
+            new ModHangingSignBlock(AbstractBlock.Settings.copy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.GILDED_OAK));
     public static final Block GILDED_OAK_WALL_HANGING_SIGN = registerBlockWithoutBlockItem("gilded_oak_wall_hanging_sign",
-            new ModWallHangingSignBlock(ModWoodTypes.GILDED_OAK, AbstractBlock.Settings.copy(Blocks.OAK_WALL_HANGING_SIGN)));
+            new ModWallHangingSignBlock(AbstractBlock.Settings.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.GILDED_OAK));
 
 
     private static Block registerBlockWithoutBlockItem(String name, Block block) {

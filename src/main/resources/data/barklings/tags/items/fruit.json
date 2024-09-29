@@ -1,0 +1,23 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:apple",
+    "barklings:banana",
+    "barklings:cherries",
+    "barklings:orange",
+    "barklings:pear",
+    "barklings:plum",
+    "barklings:pomegranate",
+    "barklings:starfruit",
+    "barklings:strawberry",
+    "barklings:warped_mango",
+    "barklings:crimson_durian",
+    "barklings:grapes",
+    "barklings:blueberry",
+    "minecraft:glow_berries",
+    "minecraft:sweet_berries",
+    "minecraft:chorus_fruit",
+    "minecraft:melon_slice",
+    "minecraft:pumpkin_pie"
+  ]
+}

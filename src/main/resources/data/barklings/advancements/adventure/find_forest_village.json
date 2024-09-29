@@ -1,5 +1,5 @@
 {
-  "parent": "barklings:adventure/find_forest_village",
+  "parent": "minecraft:adventure/root",
   "criteria": {
     "oak_village": {
       "conditions": {
@@ -132,45 +132,27 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.barklings.find_every_forest_village.description"
+      "translate": "advancements.barklings.find_forest_village.description"
     },
-    "frame": "challenge",
     "icon": {
       "count": 1,
-      "id": "minecraft:oak_sapling"
+      "item": "minecraft:oak_sapling"
     },
     "title": {
-      "translate": "advancements.barklings.find_every_forest_village.title"
+      "translate": "advancements.barklings.find_forest_village.title"
     }
   },
   "requirements": [
     [
-      "oak_village"
-    ],
-    [
-      "birch_village"
-    ],
-    [
-      "spruce_village"
-    ],
-    [
-      "jungle_village"
-    ],
-    [
-      "dark_oak_village"
-    ],
-    [
-      "acacia_village"
-    ],
-    [
-      "cherry_village"
-    ],
-    [
+      "oak_village",
+      "birch_village",
+      "spruce_village",
+      "jungle_village",
+      "dark_oak_village",
+      "acacia_village",
+      "cherry_village",
       "mangrove_village"
     ]
   ],
-  "rewards": {
-    "experience": 100
-  },
   "sends_telemetry_event": true
 }

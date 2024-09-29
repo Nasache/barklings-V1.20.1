@@ -153,7 +153,7 @@
     "frame": "goal",
     "icon": {
       "count": 1,
-      "id": "barklings:pear"
+      "item": "barklings:pear"
     },
     "title": {
       "translate": "advancements.barklings.fruity_feast.title"

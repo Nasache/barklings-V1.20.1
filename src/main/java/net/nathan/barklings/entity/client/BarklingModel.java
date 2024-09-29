@@ -70,8 +70,8 @@ public class BarklingModel extends SinglePartEntityModel<BarklingEntity> {
     }
 
     @Override
-    public void render(MatrixStack matrices, VertexConsumer vertexConsumer, int light, int overlay, int color) {
-        body.render(matrices, vertexConsumer, light, overlay, color);
+    public void render(MatrixStack matrices, VertexConsumer vertexConsumer, int light, int overlay, float red, float green, float blue, float alpha) {
+        body.render(matrices, vertexConsumer, light, overlay, red, green, blue, alpha);
     }
 
     @Override

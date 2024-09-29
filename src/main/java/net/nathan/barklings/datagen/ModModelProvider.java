@@ -88,6 +88,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.GILDED_OAK_CHEST_BOAT, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.BARKLING_SPAWN_EGG,
-                new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));
+                new Model(Optional.of(new Identifier("item/template_spawn_egg")), Optional.empty()));
     }
 }

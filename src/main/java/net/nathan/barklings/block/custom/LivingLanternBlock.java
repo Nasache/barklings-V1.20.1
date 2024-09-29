@@ -23,15 +23,10 @@ import net.minecraft.world.WorldView;
 import org.jetbrains.annotations.Nullable;
 
 public class LivingLanternBlock extends Block implements Waterloggable {
-    public static final MapCodec<LivingLanternBlock> CODEC = createCodec(LivingLanternBlock::new);
     public static final BooleanProperty HANGING;
     public static final BooleanProperty WATERLOGGED;
     protected static final VoxelShape STANDING_SHAPE;
     protected static final VoxelShape HANGING_SHAPE;
-
-    public MapCodec<LivingLanternBlock> getCodec() {
-        return CODEC;
-    }
 
     public LivingLanternBlock(AbstractBlock.Settings settings) {
         super(settings);
@@ -56,7 +51,7 @@ public class LivingLanternBlock extends Block implements Waterloggable {
         return null;
     }
 
-    protected VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return (Boolean)state.get(HANGING) ? HANGING_SHAPE : STANDING_SHAPE;
     }
 
@@ -64,7 +59,7 @@ public class LivingLanternBlock extends Block implements Waterloggable {
         builder.add(new Property[]{HANGING, WATERLOGGED});
     }
 
-    protected boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
+    public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
         Direction direction = attachedDirection(state).getOpposite();
         BlockPos blockPos = pos.offset(direction);
         BlockState blockState = world.getBlockState(blockPos);
@@ -75,7 +70,7 @@ public class LivingLanternBlock extends Block implements Waterloggable {
         return (Boolean)state.get(HANGING) ? Direction.DOWN : Direction.UP;
     }
 
-    protected BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
+    public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
         if ((Boolean)state.get(WATERLOGGED)) {
             world.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
         }
@@ -83,7 +78,7 @@ public class LivingLanternBlock extends Block implements Waterloggable {
         return attachedDirection(state).getOpposite() == direction && !state.canPlaceAt(world, pos) ? Blocks.AIR.getDefaultState() : super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
     }
 
-    protected FluidState getFluidState(BlockState state) {
+    public FluidState getFluidState(BlockState state) {
         return (Boolean)state.get(WATERLOGGED) ? Fluids.WATER.getStill(false) : super.getFluidState(state);
     }
 

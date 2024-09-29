@@ -18,25 +18,6 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg) {
-        getOrCreateTagBuilder(ModTags.Items.FRUIT)
-                .add(Items.APPLE,
-                        ModItems.BANANA,
-                        ModItems.CHERRIES,
-                        ModItems.ORANGE,
-                        ModItems.PEAR,
-                        ModItems.PLUM,
-                        ModItems.POMEGRANATE,
-                        ModItems.STARFRUIT,
-                        ModItems.STRAWBERRY,
-                        ModItems.WARPED_MANGO,
-                        ModItems.CRIMSON_DURIAN,
-                        ModItems.GRAPES,
-                        ModItems.BLUEBERRY,
-                        Items.GLOW_BERRIES,
-                        Items.SWEET_BERRIES,
-                        Items.CHORUS_FRUIT,
-                        Items.MELON_SLICE,
-                        Items.PUMPKIN_PIE);
 
         getOrCreateTagBuilder(ItemTags.LOGS_THAT_BURN)
                 .add(ModBlocks.GILDED_OAK_LOG.asItem(), ModBlocks.GILDED_OAK_WOOD.asItem(),
@@ -44,10 +25,6 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
         getOrCreateTagBuilder(ItemTags.PLANKS)
                 .add(ModBlocks.GILDED_OAK_PLANKS.asItem());
-
-        getOrCreateTagBuilder(ModTags.Items.GILDED_OAK_LOGS)
-                .add(ModBlocks.GILDED_OAK_LOG.asItem(), ModBlocks.GILDED_OAK_WOOD.asItem(),
-                        ModBlocks.STRIPPED_GILDED_OAK_LOG.asItem(), ModBlocks.STRIPPED_GILDED_OAK_WOOD.asItem());
 
         getOrCreateTagBuilder(ItemTags.LOGS)
                 .add(ModBlocks.GILDED_OAK_LOG.asItem(), ModBlocks.GILDED_OAK_WOOD.asItem(),
