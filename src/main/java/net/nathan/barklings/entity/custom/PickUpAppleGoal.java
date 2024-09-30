@@ -162,7 +162,7 @@ public class PickUpAppleGoal extends Goal {
         List<ItemEntity> list = this.barkling.getWorld().getEntitiesByClass(ItemEntity.class,
                 this.barkling.getBoundingBox().expand(8.0D, 4.0D, 8.0D), (item) -> item.getStack().isIn(ModTags.Items.FRUIT));
         if (!list.isEmpty()) {
-            this.targetApple = list.getFirst();
+            this.targetApple = list.isEmpty() ? null : list.get(0);
             return true;
         }
         return false;

@@ -8,8 +8,8 @@
 		"Nathan"
 	],
 	"contact": {
-		"homepage": "https://github.com/Nasache/barklings-V1.21",
-		"sources": "https://github.com/Nasache/barklings-V1.21"
+		"homepage": "https://github.com/Nasache/barklings-V1.20.1",
+		"sources": "https://github.com/Nasache/barklings-V1.20.1"
 	},
 	"license": "MIT",
 	"icon": "assets/barklings/barklings_icon.png",
@@ -31,7 +31,7 @@
 	"depends": {
 		"fabricloader": ">=0.15.11",
 		"minecraft": "~1.20.1",
-		"java": ">=21",
+		"java": ">=17",
 		"fabric-api": "*"
 	},
 	"suggests": {

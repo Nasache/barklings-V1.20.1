@@ -1,7 +1,7 @@
 {
   "required": true,
   "package": "net.nathan.barklings.mixin",
-  "compatibilityLevel": "JAVA_21",
+  "compatibilityLevel": "JAVA_17",
   "mixins": [
     "SweetBerryBushBlockMixin"
   ],
