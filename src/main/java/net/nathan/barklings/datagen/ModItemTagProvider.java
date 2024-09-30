@@ -32,5 +32,15 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
         getOrCreateTagBuilder(ItemTags.LEAVES)
                 .add(ModBlocks.GILDED_OAK_LEAVES.asItem());
+
+        getOrCreateTagBuilder(ModTags.Items.GILDED_OAK_LOGS)
+                .add(ModBlocks.GILDED_OAK_LOG.asItem(),
+                        ModBlocks.GILDED_OAK_WOOD.asItem(),
+                        ModBlocks.STRIPPED_GILDED_OAK_LOG.asItem(),
+                        ModBlocks.STRIPPED_GILDED_OAK_WOOD.asItem());
+
+        getOrCreateTagBuilder(ItemTags.MUSIC_DISCS)
+                .add(ModItems.HIDDEN_VOICES_MUSIC_DISC);
+
     }
 }

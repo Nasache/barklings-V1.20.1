@@ -8,6 +8,7 @@ import net.nathan.barklings.entity.ModBoats;
 import net.nathan.barklings.entity.ModEntities;
 import net.nathan.barklings.item.ModItemGroup;
 import net.nathan.barklings.item.ModItems;
+import net.nathan.barklings.painting.ModPaintings;
 import net.nathan.barklings.sound.ModSounds;
 import net.nathan.barklings.util.ModRegistries;
 import net.nathan.barklings.world.gen.ModWorldGeneration;
@@ -35,5 +36,7 @@ public class BarklingsMain implements ModInitializer {
 
 		ModBlockEntities.registerBlockEntities();
 		ModBoats.registerBoats();
+
+		ModPaintings.registerPaintings();
 	}
 }

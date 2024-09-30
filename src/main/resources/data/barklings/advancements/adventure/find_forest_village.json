@@ -9,7 +9,7 @@
             "entity": "this",
             "predicate": {
               "location": {
-                "structures": "barklings:oak_village"
+                "structure": "barklings:oak_village"
               }
             }
           }
@@ -25,7 +25,7 @@
             "entity": "this",
             "predicate": {
               "location": {
-                "structures": "barklings:birch_village"
+                "structure": "barklings:birch_village"
               }
             }
           }
@@ -41,7 +41,7 @@
             "entity": "this",
             "predicate": {
               "location": {
-                "structures": "barklings:spruce_village"
+                "structure": "barklings:spruce_village"
               }
             }
           }
@@ -57,7 +57,7 @@
             "entity": "this",
             "predicate": {
               "location": {
-                "structures": "barklings:cherry_village"
+                "structure": "barklings:cherry_village"
               }
             }
           }
@@ -73,7 +73,7 @@
             "entity": "this",
             "predicate": {
               "location": {
-                "structures": "barklings:jungle_village"
+                "structure": "barklings:jungle_village"
               }
             }
           }
@@ -89,7 +89,7 @@
             "entity": "this",
             "predicate": {
               "location": {
-                "structures": "barklings:mangrove_village"
+                "structure": "barklings:mangrove_village"
               }
             }
           }
@@ -105,7 +105,7 @@
             "entity": "this",
             "predicate": {
               "location": {
-                "structures": "barklings:acacia_village"
+                "structure": "barklings:acacia_village"
               }
             }
           }
@@ -121,7 +121,7 @@
             "entity": "this",
             "predicate": {
               "location": {
-                "structures": "barklings:dark_oak_village"
+                "structure": "barklings:dark_oak_village"
               }
             }
           }
@@ -131,13 +131,15 @@
     }
   },
   "display": {
+    "announce_to_chat": true,
     "description": {
       "translate": "advancements.barklings.find_forest_village.description"
     },
+    "hidden": false,
     "icon": {
-      "count": 1,
       "item": "minecraft:oak_sapling"
     },
+    "show_toast": true,
     "title": {
       "translate": "advancements.barklings.find_forest_village.title"
     }

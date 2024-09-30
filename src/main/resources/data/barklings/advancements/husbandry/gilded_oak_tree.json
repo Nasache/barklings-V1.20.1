@@ -5,7 +5,9 @@
       "conditions": {
         "items": [
           {
-            "items": "barklings:gilded_oak_sapling"
+            "items": [
+              "barklings:gilded_oak_sapling"
+            ]
           }
         ]
       },
@@ -13,14 +15,16 @@
     }
   },
   "display": {
+    "announce_to_chat": true,
     "description": {
       "translate": "advancements.barklings.gilded_oak_sapling.description"
     },
     "frame": "goal",
+    "hidden": false,
     "icon": {
-      "count": 1,
       "item": "barklings:gilded_oak_sapling"
     },
+    "show_toast": true,
     "title": {
       "translate": "advancements.barklings.gilded_oak_sapling.title"
     }

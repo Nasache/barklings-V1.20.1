@@ -2,95 +2,146 @@
   "parent": "barklings:adventure/find_forest_village",
   "criteria": {
     "oak_village": {
-      "trigger": "minecraft:location",
       "conditions": {
-        "location": {
-          "structures": [
-            "barklings:oak_village"
-          ]
-        }
-      }
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "barklings:oak_village"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
     },
     "birch_village": {
-      "trigger": "minecraft:location",
       "conditions": {
-        "location": {
-          "structures": [
-            "barklings:birch_village"
-          ]
-        }
-      }
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "barklings:birch_village"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
     },
     "spruce_village": {
-      "trigger": "minecraft:location",
       "conditions": {
-        "location": {
-          "structures": [
-            "barklings:spruce_village"
-          ]
-        }
-      }
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "barklings:spruce_village"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
     },
     "cherry_village": {
-      "trigger": "minecraft:location",
       "conditions": {
-        "location": {
-          "structures": [
-            "barklings:cherry_village"
-          ]
-        }
-      }
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "barklings:cherry_village"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
     },
     "jungle_village": {
-      "trigger": "minecraft:location",
       "conditions": {
-        "location": {
-          "structures": [
-            "barklings:jungle_village"
-          ]
-        }
-      }
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "barklings:jungle_village"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
     },
     "mangrove_village": {
-      "trigger": "minecraft:location",
       "conditions": {
-        "location": {
-          "structures": [
-            "barklings:mangrove_village"
-          ]
-        }
-      }
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "barklings:mangrove_village"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
     },
     "acacia_village": {
-      "trigger": "minecraft:location",
       "conditions": {
-        "location": {
-          "structures": [
-            "barklings:acacia_village"
-          ]
-        }
-      }
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "barklings:acacia_village"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
     },
     "dark_oak_village": {
-      "trigger": "minecraft:location",
       "conditions": {
-        "location": {
-          "structures": [
-            "barklings:dark_oak_village"
-          ]
-        }
-      }
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "barklings:dark_oak_village"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
     }
   },
   "display": {
+    "announce_to_chat": true,
     "description": {
       "translate": "advancements.barklings.find_every_forest_village.description"
     },
     "frame": "challenge",
+    "hidden": false,
     "icon": {
       "count": 1,
       "item": "minecraft:oak_sapling"
     },
+    "show_toast": true,
     "title": {
       "translate": "advancements.barklings.find_every_forest_village.title"
     }

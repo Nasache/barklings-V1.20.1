@@ -20,6 +20,7 @@ public class BarklingsDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ModModelProvider::new);
 		pack.addProvider(ModRecipeGenerator::new);
 		pack.addProvider(ModWorldGenerator::new);
+		pack.addProvider(ModPaintingVariantTagProvider::new);
 	}
 
 	@Override
