@@ -65,11 +65,11 @@ public class ModBlocks {
     public static final Block GILDED_OAK_SIGN = registerBlockWithoutBlockItem("gilded_oak_sign",
             new ModStandingSignBlock(AbstractBlock.Settings.copy(Blocks.OAK_SIGN), ModWoodTypes.GILDED_OAK));
     public static final Block GILDED_OAK_WALL_SIGN = registerBlockWithoutBlockItem("gilded_oak_wall_sign",
-            new ModWallSignBlock(AbstractBlock.Settings.copy(Blocks.OAK_WALL_SIGN), ModWoodTypes.GILDED_OAK));
+            new ModWallSignBlock(AbstractBlock.Settings.copy(Blocks.OAK_WALL_SIGN).dropsLike(GILDED_OAK_SIGN), ModWoodTypes.GILDED_OAK));
     public static final Block GILDED_OAK_HANGING_SIGN = registerBlockWithoutBlockItem("gilded_oak_hanging_sign",
             new ModHangingSignBlock(AbstractBlock.Settings.copy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.GILDED_OAK));
     public static final Block GILDED_OAK_WALL_HANGING_SIGN = registerBlockWithoutBlockItem("gilded_oak_wall_hanging_sign",
-            new ModWallHangingSignBlock(AbstractBlock.Settings.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.GILDED_OAK));
+            new ModWallHangingSignBlock(AbstractBlock.Settings.copy(Blocks.OAK_WALL_HANGING_SIGN).dropsLike(GILDED_OAK_HANGING_SIGN), ModWoodTypes.GILDED_OAK));
 
 
     private static Block registerBlockWithoutBlockItem(String name, Block block) {
