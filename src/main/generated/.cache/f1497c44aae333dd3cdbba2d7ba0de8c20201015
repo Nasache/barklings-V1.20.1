@@ -1,0 +1,11 @@
+// 1.20.1	2025-02-05T18:06:07.937472	Barklings/Tags for minecraft:block
+f923ab8401e196cc86ae6c3024f74f70dcd0ed85 data\minecraft\tags\blocks\logs_that_burn.json
+f923ab8401e196cc86ae6c3024f74f70dcd0ed85 data\barklings\tags\blocks\gilded_oak_logs.json
+e9c8ecdc05c40cb08a13e0ff55c332e76f5a9ddb data\minecraft\tags\blocks\leaves.json
+a2b1b0ea3f71c61be9dfd4313dcebeec3e62f68b data\minecraft\tags\blocks\planks.json
+30418a627a2176fe0c6bdac70fc81f3cacf4c438 data\barklings\tags\blocks\fruit_leaves.json
+1155a4047db9ef1e5a4dac1d09c890e1de38ff6f data\minecraft\tags\blocks\mineable\axe.json
+ee2d44a4592cf061b26dc24bf6540ee72c7ff536 data\minecraft\tags\blocks\flowers.json
+f923ab8401e196cc86ae6c3024f74f70dcd0ed85 data\minecraft\tags\blocks\logs.json
+2e72d8b5e883454fda1ab58e06caf8721b79ff68 data\minecraft\tags\blocks\wooden_fences.json
+3db3c7aef93fa5cd90980c852b4377d2d22850d2 data\minecraft\tags\blocks\fence_gates.json

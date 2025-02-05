@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button_inventory",
+  "textures": {
+    "texture": "barklings:block/gilded_oak_planks"
+  }
+}

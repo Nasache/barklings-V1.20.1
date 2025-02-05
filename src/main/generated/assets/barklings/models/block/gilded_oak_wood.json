@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "barklings:block/gilded_oak_log",
+    "side": "barklings:block/gilded_oak_log"
+  }
+}

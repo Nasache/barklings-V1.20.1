@@ -4,7 +4,9 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
+import net.minecraft.loot.LootTable;
 import net.minecraft.loot.LootTables;
+import net.minecraft.registry.RegistryKey;
 import net.minecraft.util.Identifier;
 import net.nathan.barklings.BarklingsMain;
 
@@ -22,6 +24,8 @@ public class CustomLootTables {
     public static final Identifier ACACIA_BARKLING_BARTERING;
     public static final Identifier CRIMSON_BARKLING_BARTERING;
     public static final Identifier WARPED_BARKLING_BARTERING;
+    public static final Identifier MUSHROOM_BARKLING_BARTERING;
+    public static final Identifier AZALEA_BARKLING_BARTERING;
 
     public static final Identifier OAK_BARKLING_DROPS;
     public static final Identifier BIRCH_BARKLING_DROPS;
@@ -33,6 +37,8 @@ public class CustomLootTables {
     public static final Identifier ACACIA_BARKLING_DROPS;
     public static final Identifier CRIMSON_BARKLING_DROPS;
     public static final Identifier WARPED_BARKLING_DROPS;
+    public static final Identifier MUSHROOM_BARKLING_DROPS;
+    public static final Identifier AZALEA_BARKLING_DROPS;
 
     static {
         LOOT_TABLES_READ_ONLY = Collections.unmodifiableSet(LOOT_TABLES);
@@ -47,6 +53,9 @@ public class CustomLootTables {
         ACACIA_BARKLING_BARTERING = registerLootTable(new Identifier(BarklingsMain.MOD_ID, "gameplay/dweller/acacia_dweller_bartering"));
         CRIMSON_BARKLING_BARTERING = registerLootTable(new Identifier(BarklingsMain.MOD_ID, "gameplay/dweller/crimson_dweller_bartering"));
         WARPED_BARKLING_BARTERING = registerLootTable(new Identifier(BarklingsMain.MOD_ID, "gameplay/dweller/warped_dweller_bartering"));
+        MUSHROOM_BARKLING_BARTERING = registerLootTable(new Identifier(BarklingsMain.MOD_ID, "gameplay/dweller/mushroom_dweller_bartering"));
+        AZALEA_BARKLING_BARTERING = registerLootTable(new Identifier(BarklingsMain.MOD_ID, "gameplay/dweller/azalea_dweller_bartering"));
+
 
         OAK_BARKLING_DROPS = registerLootTable(new Identifier(BarklingsMain.MOD_ID, "entities/oak_dweller_drops"));
         BIRCH_BARKLING_DROPS = registerLootTable(new Identifier(BarklingsMain.MOD_ID, "entities/birch_dweller_drops"));
@@ -58,6 +67,8 @@ public class CustomLootTables {
         ACACIA_BARKLING_DROPS = registerLootTable(new Identifier(BarklingsMain.MOD_ID, "entities/acacia_dweller_drops"));
         CRIMSON_BARKLING_DROPS = registerLootTable(new Identifier(BarklingsMain.MOD_ID, "entities/crimson_dweller_drops"));
         WARPED_BARKLING_DROPS = registerLootTable(new Identifier(BarklingsMain.MOD_ID, "entities/warped_dweller_drops"));
+        MUSHROOM_BARKLING_DROPS = registerLootTable(new Identifier(BarklingsMain.MOD_ID, "entities/mushroom_dweller_drops"));
+        AZALEA_BARKLING_DROPS = registerLootTable(new Identifier(BarklingsMain.MOD_ID, "entities/azalea_dweller_drops"));
     }
 
     private static Identifier registerLootTable(Identifier id) {

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "barklings:block/living_lantern"
+    },
+    "hanging=true": {
+      "model": "barklings:block/living_lantern_hanging"
+    }
+  }
+}

@@ -1,6 +1,5 @@
 package net.nathan.barklings.world.gen;
 
-
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.minecraft.world.biome.BiomeKeys;
@@ -18,5 +17,10 @@ public class ModFlowerGeneration {
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.DARK_FOREST),
                 GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.PATCH_BLUEBERRY_PLACED_KEY);
 
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.WARPED_FOREST),
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.PATCH_MANGO_PLACED_KEY);
+
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.CRIMSON_FOREST),
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.PATCH_DURIAN_PLACED_KEY);
     }
 }

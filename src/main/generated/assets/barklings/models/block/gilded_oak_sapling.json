@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "barklings:block/gilded_oak_sapling"
+  }
+}

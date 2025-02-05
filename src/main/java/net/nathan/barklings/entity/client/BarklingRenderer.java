@@ -4,6 +4,7 @@ import com.google.common.collect.Maps;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.entity.MobEntityRenderer;
+import net.minecraft.client.render.entity.feature.HeldItemFeatureRenderer;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Util;
@@ -78,10 +79,22 @@ public class BarklingRenderer extends MobEntityRenderer<BarklingEntity, Barkling
                 map.put(BarklingVariant.WARPED_WART, Identifier.of(BarklingsMain.MOD_ID, "textures/entity/dwellers/warped/warped_dweller_wart.png"));
                 map.put(BarklingVariant.WARPED_WART_SHROOM, Identifier.of(BarklingsMain.MOD_ID, "textures/entity/dwellers/warped/warped_dweller_wart_shroom.png"));
 
+                map.put(BarklingVariant.MUSHROOM, Identifier.of(BarklingsMain.MOD_ID, "textures/entity/dwellers/mushroom/mushroom_dweller.png"));
+                map.put(BarklingVariant.RED_MUSHROOM, Identifier.of(BarklingsMain.MOD_ID, "textures/entity/dwellers/mushroom/rmushroom_dweller.png"));
+                map.put(BarklingVariant.BROWN_MUSHROOM, Identifier.of(BarklingsMain.MOD_ID, "textures/entity/dwellers/mushroom/bmushroom_dweller.png"));
+                map.put(BarklingVariant.MUSHROOM_RMUSH, Identifier.of(BarklingsMain.MOD_ID, "textures/entity/dwellers/mushroom/mushroom_dweller_rmush.png"));
+                map.put(BarklingVariant.MUSHROOM_BMUSH, Identifier.of(BarklingsMain.MOD_ID, "textures/entity/dwellers/mushroom/mushroom_dweller_bmush.png"));
+
+                map.put(BarklingVariant.AZALEA, Identifier.of(BarklingsMain.MOD_ID, "textures/entity/dwellers/azalea/azalea_dweller.png"));
+                map.put(BarklingVariant.FLOWER_AZALEA, Identifier.of(BarklingsMain.MOD_ID, "textures/entity/dwellers/azalea/flowering_azalea_dweller.png"));
+                map.put(BarklingVariant.AZALEA_TREE, Identifier.of(BarklingsMain.MOD_ID, "textures/entity/dwellers/azalea/azalea_dweller_sap.png"));
+                map.put(BarklingVariant.FLOWER_AZALEA_TREE, Identifier.of(BarklingsMain.MOD_ID, "textures/entity/dwellers/azalea/flowering_azalea_dweller_sap.png"));
             });
 
     public BarklingRenderer(EntityRendererFactory.Context context) {
         super(context, new BarklingModel(context.getPart(ModEntityModelLayers.BARKLING)), 0.4f);
+        this.addFeature(new HeldItemFeatureRenderer<>(this, context.getHeldItemRenderer()));
+
     }
 
     @Override

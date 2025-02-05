@@ -13,6 +13,7 @@ import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.loot.LootTable;
@@ -23,7 +24,6 @@ import net.minecraft.nbt.NbtCompound;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.entry.RegistryEntry;
-import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
@@ -43,13 +43,20 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
-public class BarklingEntity extends AnimalEntity {
-
+public class BarklingEntity extends AnimalEntity implements InventoryOwner {
     public static final TrackedData<Integer> DATA_ID_TYPE_VARIANT =
             DataTracker.registerData(BarklingEntity.class, TrackedDataHandlerRegistry.INTEGER);
 
+    private final SimpleInventory inventory = new SimpleInventory(8);
+
     public final AnimationState idleAnimationState = new AnimationState();
     private int idleAnimationTimeout = 0;
+
+    public static final TrackedData<Boolean> IS_ADMIRING =
+            DataTracker.registerData(BarklingEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
+    public static final TrackedData<Integer> ADMIRE_TIMER =
+            DataTracker.registerData(BarklingEntity.class, TrackedDataHandlerRegistry.INTEGER);
+
 
     public BarklingEntity(EntityType<? extends AnimalEntity> entityType, World world) {
         super(entityType, world);
@@ -115,7 +122,10 @@ public class BarklingEntity extends AnimalEntity {
     protected void initDataTracker() {
         super.initDataTracker();
         this.dataTracker.startTracking(DATA_ID_TYPE_VARIANT, 0);
+        this.dataTracker.startTracking(IS_ADMIRING, false);
+        this.dataTracker.startTracking(ADMIRE_TIMER, 0);
     }
+
 
     int getTypeVariant() {
         return this.dataTracker.get(DATA_ID_TYPE_VARIANT);
@@ -145,18 +155,28 @@ public class BarklingEntity extends AnimalEntity {
     public void readCustomDataFromNbt(NbtCompound nbt) {
         super.readCustomDataFromNbt(nbt);
         this.dataTracker.set(DATA_ID_TYPE_VARIANT, nbt.getInt("Variant"));
+        this.readInventory(nbt);
+        this.dataTracker.set(IS_ADMIRING, nbt.getBoolean("IsAdmiring"));
+        this.dataTracker.set(ADMIRE_TIMER, nbt.getInt("AdmireTimer"));
     }
+
 
     @Override
     public void writeCustomDataToNbt(NbtCompound nbt) {
         super.writeCustomDataToNbt(nbt);
         nbt.putInt("Variant", this.getTypeVariant());
+        this.writeInventory(nbt);
+
+        nbt.putBoolean("IsAdmiring", this.dataTracker.get(IS_ADMIRING));
+        nbt.putInt("AdmireTimer", this.dataTracker.get(ADMIRE_TIMER));
     }
+
+
 
     private List<ItemStack> getDropForVariant() {
         BarklingVariant variant = getVariant();
-        Identifier lootTableIdentifier;
 
+        Identifier lootTableIdentifier;
         switch (variant) {
             case OAK:
             case OAK_MOSS:
@@ -229,6 +249,19 @@ public class BarklingEntity extends AnimalEntity {
             case WARPED_WART_SHROOM:
                 lootTableIdentifier = CustomLootTables.WARPED_BARKLING_DROPS;
                 break;
+            case MUSHROOM:
+            case RED_MUSHROOM:
+            case BROWN_MUSHROOM:
+            case MUSHROOM_RMUSH:
+            case MUSHROOM_BMUSH:
+                lootTableIdentifier = CustomLootTables.MUSHROOM_BARKLING_DROPS;
+                break;
+            case AZALEA:
+            case FLOWER_AZALEA:
+            case AZALEA_TREE:
+            case FLOWER_AZALEA_TREE:
+                lootTableIdentifier = CustomLootTables.AZALEA_BARKLING_DROPS;
+                break;
             default:
                 return Collections.emptyList();
         }
@@ -248,6 +281,15 @@ public class BarklingEntity extends AnimalEntity {
         return lootTable.generateLoot(lootContext);
     }
 
+
+    @Override
+    public SimpleInventory getInventory() {
+        return this.inventory;
+    }
+
+    public void equipItemInHand(ItemStack stack) {
+        this.equipStack(EquipmentSlot.MAINHAND, stack);
+    }
 
     @Override
     public void onDeath(DamageSource source) {

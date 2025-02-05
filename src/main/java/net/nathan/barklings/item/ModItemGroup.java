@@ -15,7 +15,7 @@ public class ModItemGroup {
     public static final ItemGroup BARKLINGS = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(BarklingsMain.MOD_ID, "barklings"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.barklings"))
-                    .icon(() -> new ItemStack(ModItems.PEAR)).entries((displayContext, entries) -> {
+                    .icon(() -> new ItemStack(ModItems.WAX_PEAR)).entries((displayContext, entries) -> {
 
                         entries.add(ModItems.BARKLING_SPAWN_EGG);
 
@@ -39,24 +39,29 @@ public class ModItemGroup {
                         entries.add(ModBlocks.GILDED_OAK_SAPLING);
                         entries.add(ModBlocks.GILDED_OAK_LEAVES);
 
-                        entries.add(ModBlocks.CLOVER);
+                        entries.add(ModBlocks.CLOVER_CARPET);
                         entries.add(ModItems.HIDDEN_VOICES_MUSIC_DISC);
 
                         entries.add(ModBlocks.LIVING_LANTERN);
 
-                        entries.add(ModItems.CHERRIES);
-                        entries.add(ModItems.BANANA);
-                        entries.add(ModItems.ORANGE);
-                        entries.add(ModItems.PLUM);
-                        entries.add(ModItems.POMEGRANATE);
-                        entries.add(ModItems.PEAR);
-                        entries.add(ModItems.STARFRUIT);
-                        //entries.add(ModItems.WARPED_MANGO);
-                        //entries.add(ModItems.CRIMSON_DURIAN);
+                        entries.add(ModItems.WAX_PEAR);
+                        entries.add(ModItems.SNOWY_PLUM);
+                        entries.add(ModItems.VIRANA);
+                        entries.add(ModItems.SOLIND);
+                        entries.add(ModItems.NOCTURNATE);
+                        entries.add(ModItems.MARSH_STAR);
+                        entries.add(ModItems.AURORA_CHERRIES);
 
-                        entries.add(ModItems.STRAWBERRY);
-                        entries.add(ModItems.BLUEBERRY);
-                        entries.add(ModItems.GRAPES);
+                        entries.add(ModItems.FLOWERING_LYCHEE);
+
+                        entries.add(ModItems.RED_CAPAYA);
+                        entries.add(ModItems.BROWN_SPORSIMMON);
+                        entries.add(ModItems.CRIMSON_DURIAN);
+                        entries.add(ModItems.WARPED_MANGO);
+
+                        entries.add(ModItems.BLOOM_BERRY);
+                        entries.add(ModItems.DUSK_BERRY);
+                        entries.add(ModItems.DRY_BERRIES);
 
                     }).build());
 

@@ -3,18 +3,22 @@ package net.nathan.barklings.entity.client;
 import net.minecraft.client.model.*;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.entity.model.SinglePartEntityModel;
+import net.minecraft.client.render.entity.model.ModelWithArms;
 import net.minecraft.client.util.math.MatrixStack;
+import net.minecraft.util.Arm;
 import net.minecraft.util.math.MathHelper;
 import net.nathan.barklings.entity.client.animation.BarklingAnimations;
 import net.nathan.barklings.entity.custom.BarklingEntity;
 
-public class BarklingModel extends SinglePartEntityModel<BarklingEntity> {
+public class BarklingModel extends SinglePartEntityModel<BarklingEntity> implements ModelWithArms {
     private final ModelPart body;
     private final ModelPart head;
+
     public BarklingModel(ModelPart root) {
         this.body = root.getChild("body");
         this.head = body.getChild("head");
     }
+
     public static TexturedModelData getTexturedModelData() {
         ModelData modelData = new ModelData();
         ModelPartData modelPartData = modelData.getRoot();
@@ -39,6 +43,8 @@ public class BarklingModel extends SinglePartEntityModel<BarklingEntity> {
                 .uv(27, 18).cuboid(-5.0F, -8.0F, -4.0F, 3.0F, 1.0F, 5.0F, new Dilation(0.001F))
                 .uv(29, 27).cuboid(-6.0F, -8.0F, -3.0F, 5.0F, 1.0F, 3.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
 
+        ModelPartData heldItem = head.addChild("heldItem", ModelPartBuilder.create(), ModelTransform.pivot(1.0F, 3.75F, -1.0F));
+
         ModelPartData legs = body.addChild("legs", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
 
         ModelPartData rleg = legs.addChild("rleg", ModelPartBuilder.create().uv(0, 30).cuboid(-1.0F, 0.0F, -1.0F, 2.0F, 3.0F, 2.0F, new Dilation(0.0F)), ModelTransform.pivot(-3.0F, -3.0F, 0.0F));
@@ -50,8 +56,10 @@ public class BarklingModel extends SinglePartEntityModel<BarklingEntity> {
         ModelPartData rarm = arms.addChild("rarm", ModelPartBuilder.create().uv(0, 18).cuboid(-1.0F, 0.0F, -1.0F, 2.0F, 6.0F, 2.0F, new Dilation(0.0F)), ModelTransform.pivot(-6.0F, -10.0F, 0.0F));
 
         ModelPartData larm = arms.addChild("larm", ModelPartBuilder.create().uv(0, 0).cuboid(-1.0F, 0.0F, -1.0F, 2.0F, 6.0F, 2.0F, new Dilation(0.0F)), ModelTransform.pivot(6.0F, -10.0F, 0.0F));
+
         return TexturedModelData.of(modelData, 64, 64);
     }
+
     @Override
     public void setAngles(BarklingEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
         this.getPart().traverse().forEach(ModelPart::resetTransform);
@@ -67,6 +75,11 @@ public class BarklingModel extends SinglePartEntityModel<BarklingEntity> {
 
         this.head.yaw = headYaw * 0.017453292F;
         this.head.pitch = headPitch * 0.017453292F;
+
+        ModelPart heldItem = this.head.getChild("heldItem");
+        if (heldItem != null) {
+            heldItem.yaw = this.head.yaw;
+        }
     }
 
     @Override
@@ -77,5 +90,13 @@ public class BarklingModel extends SinglePartEntityModel<BarklingEntity> {
     @Override
     public ModelPart getPart() {
         return body;
+    }
+
+    @Override
+    public void setArmAngle(Arm arm, MatrixStack matrices) {
+        ModelPart heldItem = this.head.getChild("heldItem");
+        if (heldItem != null) {
+            heldItem.rotate(matrices);
+        }
     }
 }

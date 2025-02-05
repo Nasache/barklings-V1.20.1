@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top_left_open",
+  "textures": {
+    "bottom": "barklings:block/gilded_oak_door_bottom",
+    "top": "barklings:block/gilded_oak_door_top"
+  }
+}

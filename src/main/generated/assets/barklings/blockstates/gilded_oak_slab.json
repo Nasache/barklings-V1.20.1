@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "barklings:block/gilded_oak_slab"
+    },
+    "type=double": {
+      "model": "barklings:block/gilded_oak_planks"
+    },
+    "type=top": {
+      "model": "barklings:block/gilded_oak_slab_top"
+    }
+  }
+}

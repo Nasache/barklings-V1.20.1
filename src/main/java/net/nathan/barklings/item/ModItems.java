@@ -15,32 +15,40 @@ import net.nathan.barklings.sound.ModSounds;
 public class ModItems {
 
 
-    public static final Item CHERRIES = registerItem("cherries",
-            new Item(new Item.Settings().food(ModFoodComponents.CHERRIES)));
-    public static final Item BANANA = registerItem("banana",
-            new Item(new Item.Settings().food(ModFoodComponents.BANANA)));
-    public static final Item ORANGE = registerItem("orange",
-            new Item(new Item.Settings().food(ModFoodComponents.ORANGE)));
-    public static final Item POMEGRANATE = registerItem("pomegranate",
-            new Item(new Item.Settings().food(ModFoodComponents.POMEGRANATE)));
-    public static final Item PEAR = registerItem("pear",
-            new Item(new Item.Settings().food(ModFoodComponents.PEAR)));
-    public static final Item PLUM = registerItem("plum",
-            new Item(new Item.Settings().food(ModFoodComponents.PLUM)));
-    public static final Item STARFRUIT = registerItem("starfruit",
-            new Item(new Item.Settings().food(ModFoodComponents.STARFRUIT)));
+    public static final Item AURORA_CHERRIES = registerItem("aurora_cherries",
+            new Item(new Item.Settings().food(ModFoodComponents.AURORA_CHERRIES)));
+    public static final Item VIRANA = registerItem("virana",
+            new Item(new Item.Settings().food(ModFoodComponents.VIRANA)));
+    public static final Item SOLIND = registerItem("solind",
+            new Item(new Item.Settings().food(ModFoodComponents.SOLIND)));
+    public static final Item NOCTURNATE = registerItem("nocturnate",
+            new Item(new Item.Settings().food(ModFoodComponents.NOCTURNATE)));
+    public static final Item WAX_PEAR = registerItem("wax_pear",
+            new Item(new Item.Settings().food(ModFoodComponents.WAX_PEAR)));
+    public static final Item SNOWY_PLUM = registerItem("snowy_plum",
+            new Item(new Item.Settings().food(ModFoodComponents.SNOWY_PLUM)));
+    public static final Item MARSH_STAR = registerItem("marsh_star",
+            new Item(new Item.Settings().food(ModFoodComponents.MARSH_STAR)));
 
     public static final Item WARPED_MANGO = registerItem("warped_mango",
-            new Item(new Item.Settings().food(ModFoodComponents.WARPED_MANGO)));
+            new AliasedBlockItem(ModBlocks.WARPED_MANGO_POD, new Item.Settings().food(ModFoodComponents.WARPED_MANGO)));
     public static final Item CRIMSON_DURIAN = registerItem("crimson_durian",
-            new Item(new Item.Settings().food(ModFoodComponents.CRIMSON_DURIAN)));
+            new AliasedBlockItem(ModBlocks.CRIMSON_DURIAN_POD,new Item.Settings().food(ModFoodComponents.CRIMSON_DURIAN)));
 
-    public static final Item STRAWBERRY = registerItem("strawberry",
-            new AliasedBlockItem(ModBlocks.STRAWBERRY_BUSH, new Item.Settings().food(ModFoodComponents.STRAWBERRY)));
-    public static final Item GRAPES = registerItem("grapes",
-            new AliasedBlockItem(ModBlocks.GRAPE_BUSH, new Item.Settings().food(ModFoodComponents.GRAPES)));
-    public static final Item BLUEBERRY = registerItem("blueberry",
-            new AliasedBlockItem(ModBlocks.BLUEBERRY_BUSH, new Item.Settings().food(ModFoodComponents.BLUEBERRY)));
+    public static final Item RED_CAPAYA = registerItem("red_capaya",
+            new Item(new Item.Settings().food(ModFoodComponents.RED_CAPAYA)));
+    public static final Item BROWN_SPORSIMMON = registerItem("brown_sporsimmon",
+            new Item(new Item.Settings().food(ModFoodComponents.BROWN_SPORSIMMON)));
+
+    public static final Item FLOWERING_LYCHEE = registerItem("flowering_lychee",
+            new Item(new Item.Settings().food(ModFoodComponents.FLOWERING_LYCHEE)));
+
+    public static final Item BLOOM_BERRY = registerItem("bloom_berry",
+            new AliasedBlockItem(ModBlocks.BLOOM_BERRY_BUSH, new Item.Settings().food(ModFoodComponents.BLOOM_BERRY)));
+    public static final Item DRY_BERRIES = registerItem("dry_berries",
+            new AliasedBlockItem(ModBlocks.DRY_BERRY_BUSH, new Item.Settings().food(ModFoodComponents.DRY_BERRIES)));
+    public static final Item DUSK_BERRY = registerItem("dusk_berry",
+            new AliasedBlockItem(ModBlocks.DUSK_BERRY_BUSH, new Item.Settings().food(ModFoodComponents.DUSK_BERRY)));
 
 
     public static final Item HIDDEN_VOICES_MUSIC_DISC = registerItem("hidden_voices_music_disc",

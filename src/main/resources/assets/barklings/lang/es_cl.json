@@ -1,0 +1,87 @@
+{
+  "itemgroup.barklings": "Barklings",
+
+  "block.barklings.gilded_oak_planks": "Tablones de roble dorado",
+  "block.barklings.gilded_oak_stairs": "Escaleras de roble dorado",
+  "block.barklings.gilded_oak_slab": "Loseta de roble dorado",
+  "block.barklings.gilded_oak_button": "Botón de roble dorado",
+  "block.barklings.gilded_oak_pressure_plate": "Placa de presión de roble dorado",
+  "block.barklings.gilded_oak_fence": "Valla de roble dorado",
+  "block.barklings.gilded_oak_fence_gate": "Puerta de valla de roble dorado",
+  "block.barklings.gilded_oak_door": "Puerta de roble dorado",
+  "block.barklings.gilded_oak_trapdoor": "Trampilla de roble dorado",
+  "block.barklings.gilded_oak_log": "Tronco de roble dorado",
+  "block.barklings.gilded_oak_wood": "Madera de roble dorado",
+  "block.barklings.stripped_gilded_oak_log": "Tronco de roble dorado descortezado",
+  "block.barklings.stripped_gilded_oak_wood": "Madera de roble dorado descortezada",
+
+  "block.barklings.gilded_oak_sign": "Cartel de roble dorado",
+  "block.barklings.gilded_oak_hanging_sign": "Cartel colgante de roble dorado",
+
+  "item.barklings.gilded_oak_boat": "Bote de roble dorado",
+  "item.barklings.gilded_oak_chest_boat": "Bote con cofre de roble dorado",
+
+  "block.barklings.gilded_oak_leaves": "Hojas de roble dorado",
+
+  "block.barklings.gilded_oak_sapling": "Brote de roble dorado",
+  "block.barklings.bloom_berry_bush": "Arbusto de bayas florecientes",
+  "block.barklings.dusk_berry_bush": "Arbusto de bayas crepusculares",
+  "block.barklings.dry_berry_bush": "Arbusto de bayas secas",
+
+  "item.barklings.aurora_cherries": "Cerezas aurora",
+  "item.barklings.solind": "Solcorteza",
+  "item.barklings.virana": "Vidplátano",
+  "item.barklings.snowy_plum": "Ciruela nívea",
+  "item.barklings.nocturnate": "Nocturnada",
+  "item.barklings.marsh_star": "Estrella pantanosa",
+  "item.barklings.wax_pear": "Pera cerosa",
+  "item.barklings.warped_mango": "Mango distorsionado",
+  "item.barklings.crimson_durian": "Durián carmesí",
+  "item.barklings.red_capaya": "Tapaya roja",
+  "item.barklings.brown_sporsimmon": "Esporaqui parda",
+  "item.barklings.flowering_lychee": "Lichi floreciente",
+
+  "item.barklings.bloom_berry": "Baya floreciente",
+  "item.barklings.dry_berries": "Bayas secas",
+  "item.barklings.dusk_berry": "Baya crepuscular",
+
+  "block.barklings.warped_mango_pod": "Vaina de mango distorsionado",
+  "block.barklings.crimson_durian_pod": "Vaina de durián carmesí",
+
+  "block.barklings.clover_carpet": "Alfombra de tréboles",
+
+  "block.barklings.living_lantern": "Linterna viva",
+
+  "item.barklings.barkling_spawn_egg": "Huevo de generación de Barkling",
+
+  "item.barklings.hidden_voices_music_disc": "§bDisco de música§b",
+  "item.barklings.hidden_voices_music_disc.desc": "Nathan - hidden voices",
+
+  "item.tag.barklings.fruit": "Frutas",
+  "item.tag.barklings.gilded_oak_logs": "Troncos de roble dorado",
+
+  "painting.barklings.natures_palette.title": "Paleta de la naturaleza",
+  "painting.barklings.natures_palette.author": "Nathan",
+  "painting.barklings.the_forests_child.title": "El hijo del bosque",
+  "painting.barklings.the_forests_child.author": "Nathan",
+
+  "advancements.barklings.fruity_feast.title": "Festín frutal",
+  "advancements.barklings.fruity_feast.description": "¡Come todas las frutas!",
+
+  "advancements.barklings.find_forest_village.title": "Aldea oculta",
+  "advancements.barklings.find_forest_village.description": "Encuentra una aldea de Barklings",
+
+  "advancements.barklings.find_every_forest_village.title": "Explorador forestal",
+  "advancements.barklings.find_every_forest_village.description": "Descubre todos los tipos de aldeas de Barklings",
+
+  "advancements.barklings.find_forest_hermit.title": "Refugio del ermitaño",
+  "advancements.barklings.find_forest_hermit.description": "Descubre la cabaña de un ermitaño Barkling",
+
+  "advancements.barklings.find_every_forest_hermit.title": "Campeón del escondite",
+  "advancements.barklings.find_every_forest_hermit.description": "Encuentra todos los tipos de cabañas de ermitaños Barkling",
+
+  "advancements.barklings.gilded_oak_sapling.title": "Oro de la naturaleza",
+  "advancements.barklings.gilded_oak_sapling.description": "Recibe un brote dorado como regalo",
+
+  "entity.barklings.barkling": "Barkling"
+}

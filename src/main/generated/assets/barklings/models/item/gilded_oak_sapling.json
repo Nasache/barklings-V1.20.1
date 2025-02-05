@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "barklings:block/gilded_oak_sapling"
+  }
+}

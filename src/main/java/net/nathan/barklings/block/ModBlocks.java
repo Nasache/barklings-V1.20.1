@@ -15,14 +15,20 @@ import net.nathan.barklings.world.tree.GildedOakSaplingGenerator;
 
 public class ModBlocks {
 
-    public static final Block STRAWBERRY_BUSH = registerBlockWithoutBlockItem("strawberry_bush",
-            new StrawberryBush(AbstractBlock.Settings.create().mapColor(MapColor.LIME).ticksRandomly().noCollision().sounds(BlockSoundGroup.SWEET_BERRY_BUSH).pistonBehavior(PistonBehavior.DESTROY)));
-    public static final Block GRAPE_BUSH = registerBlockWithoutBlockItem("grape_bush",
-            new GrapeBush(AbstractBlock.Settings.create().mapColor(MapColor.DARK_GREEN).ticksRandomly().noCollision().sounds(BlockSoundGroup.SWEET_BERRY_BUSH).pistonBehavior(PistonBehavior.DESTROY)));
-    public static final Block BLUEBERRY_BUSH = registerBlockWithoutBlockItem("blueberry_bush",
-            new BlueberryBush(AbstractBlock.Settings.create().mapColor(MapColor.LIME).ticksRandomly().noCollision().sounds(BlockSoundGroup.SWEET_BERRY_BUSH).pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block BLOOM_BERRY_BUSH = registerBlockWithoutBlockItem("bloom_berry_bush",
+            new BloomBerryBush(AbstractBlock.Settings.create().mapColor(MapColor.LIME).ticksRandomly().noCollision().sounds(BlockSoundGroup.SWEET_BERRY_BUSH).pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block DRY_BERRY_BUSH = registerBlockWithoutBlockItem("dry_berry_bush",
+            new DryBerryBush(AbstractBlock.Settings.create().mapColor(MapColor.LIME).ticksRandomly().noCollision().sounds(BlockSoundGroup.SWEET_BERRY_BUSH).pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block DUSK_BERRY_BUSH = registerBlockWithoutBlockItem("dusk_berry_bush",
+            new DuskBerryBush(AbstractBlock.Settings.create().mapColor(MapColor.DARK_GREEN).ticksRandomly().noCollision().sounds(BlockSoundGroup.SWEET_BERRY_BUSH).pistonBehavior(PistonBehavior.DESTROY)));
 
-    public static final Block CLOVER = registerBlock("clover",
+    public static final Block WARPED_MANGO_POD = registerBlockWithoutBlockItem("warped_mango_pod",
+            new WarpedMangoPod(AbstractBlock.Settings.create().mapColor(MapColor.CYAN).ticksRandomly().noCollision().sounds(BlockSoundGroup.SWEET_BERRY_BUSH).pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block CRIMSON_DURIAN_POD = registerBlockWithoutBlockItem("crimson_durian_pod",
+            new CrimsonDurianPod(AbstractBlock.Settings.create().mapColor(MapColor.DARK_CRIMSON).ticksRandomly().noCollision().sounds(BlockSoundGroup.SWEET_BERRY_BUSH).pistonBehavior(PistonBehavior.DESTROY)));
+
+
+    public static final Block CLOVER_CARPET = registerBlock("clover_carpet",
             new FlowerbedBlock(AbstractBlock.Settings.copy(Blocks.PINK_PETALS)));
 
     public static final Block LIVING_LANTERN = registerBlock("living_lantern",
