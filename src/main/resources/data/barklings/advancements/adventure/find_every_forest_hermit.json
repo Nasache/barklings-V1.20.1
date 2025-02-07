@@ -1,0 +1,102 @@
+{
+  "parent": "barklings:adventure/find_forest_hermit",
+  "criteria": {
+    "azalea_house": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "barklings:azalea_house"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    },
+    "mushroom_house": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "barklings:mushroom_house"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    },
+    "crimson_house": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "barklings:crimson_house"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    },
+    "warped_house": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "barklings:warped_house"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.barklings.find_every_forest_hermit.description"
+    },
+    "frame": "challenge",
+    "hidden": false,
+    "icon": {
+      "item": "minecraft:flowering_azalea"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.barklings.find_every_forest_hermit.title"
+    }
+  },
+  "requirements": [
+    [
+      "azalea_house"
+    ],
+    [
+      "mushroom_house"
+    ],
+    [
+      "crimson_house"
+    ],
+    [
+      "warped_house"
+    ]
+  ],
+  "rewards": {
+    "experience": 100
+  },
+  "sends_telemetry_event": true
+}

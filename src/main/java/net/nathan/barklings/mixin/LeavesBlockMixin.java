@@ -15,7 +15,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public abstract class LeavesBlockMixin {
 
     @Inject(method = "randomTick", at = @At("HEAD"))
-    public void onRandomTick(BlockState state, ServerWorld world, BlockPos pos, Random random, CallbackInfo ci) {
+    public void onRandomTick(BlockState state, ServerWorld world, BlockPos pos, Random random, CallbackInfo info) {
         if (!(Boolean) state.get(LeavesBlock.PERSISTENT) && (Integer) state.get(LeavesBlock.DISTANCE) == 7) {
             ModDropHandler.handleLeafDrops(world, pos, state, null);
         }

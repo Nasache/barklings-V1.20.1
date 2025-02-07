@@ -1,0 +1,276 @@
+{
+  "parent": "minecraft:husbandry/plant_seed",
+  "criteria": {
+    "apple": {
+      "conditions": {
+        "item": {
+          "items": ["minecraft:apple"]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "virana": {
+      "conditions": {
+        "item": {
+          "items": ["barklings:virana"]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "flowering_lychee": {
+      "conditions": {
+        "item": {
+          "items": ["barklings:flowering_lychee"]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "red_capaya": {
+      "conditions": {
+        "item": {
+          "items": ["barklings:red_capaya"]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "brown_sporsimmon": {
+      "conditions": {
+        "item": {
+          "items": ["barklings:brown_sporsimmon"]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "crimson_durian": {
+      "conditions": {
+        "item": {
+          "items": ["barklings:crimson_durian"]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "warped_mango": {
+      "conditions": {
+        "item": {
+          "items": ["barklings:warped_mango"]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "dusk_berry": {
+      "conditions": {
+        "item": {
+          "items": ["barklings:dusk_berry"]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "aurora_cherries": {
+      "conditions": {
+        "item": {
+          "items": ["barklings:aurora_cherries"]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "dry_berries": {
+      "conditions": {
+        "item": {
+          "items": ["barklings:dry_berries"]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "solind": {
+      "conditions": {
+        "item": {
+          "items": ["barklings:solind"]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "wax_pear": {
+      "conditions": {
+        "item": {
+          "items": ["barklings:wax_pear"]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "snowy_plum": {
+      "conditions": {
+        "item": {
+          "items": ["barklings:snowy_plum"]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "nocturnate": {
+      "conditions": {
+        "item": {
+          "items": ["barklings:nocturnate"]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "marsh_star": {
+      "conditions": {
+        "item": {
+          "items": ["barklings:marsh_star"]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "bloom_berry": {
+      "conditions": {
+        "item": {
+          "items": ["barklings:bloom_berry"]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "chorus_fruit": {
+      "conditions": {
+        "item": {
+          "items": ["minecraft:chorus_fruit"]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "enchanted_golden_apple": {
+      "conditions": {
+        "item": {
+          "items": ["minecraft:enchanted_golden_apple"]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "glow_berries": {
+      "conditions": {
+        "item": {
+          "items": ["minecraft:glow_berries"]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "golden_apple": {
+      "conditions": {
+        "item": {
+          "items": ["minecraft:golden_apple"]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "melon_slice": {
+      "conditions": {
+        "item": {
+          "items": ["minecraft:melon_slice"]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "pumpkin_pie": {
+      "conditions": {
+        "item": {
+          "items": ["minecraft:pumpkin_pie"]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "sweet_berries": {
+      "conditions": {
+        "item": {
+          "items": ["minecraft:sweet_berries"]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.barklings.fruity_feast.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "item": "barklings:wax_pear"
+    },
+    "title": {
+      "translate": "advancements.barklings.fruity_feast.title"
+    }
+  },
+  "requirements": [
+    [
+      "apple"
+    ],
+    [
+      "aurora_cherries"
+    ],
+    [
+      "bloom_berry"
+    ],
+    [
+      "brown_sporsimmon"
+    ],
+    [
+      "chorus_fruit"
+    ],
+    [
+      "crimson_durian"
+    ],
+    [
+      "dusk_berry"
+    ],
+    [
+      "dry_berries"
+    ],
+    [
+      "enchanted_golden_apple"
+    ],
+    [
+      "flowering_lychee"
+    ],
+    [
+      "glow_berries"
+    ],
+    [
+      "golden_apple"
+    ],
+    [
+      "marsh_star"
+    ],
+    [
+      "melon_slice"
+    ],
+    [
+      "nocturnate"
+    ],
+    [
+      "pumpkin_pie"
+    ],
+    [
+      "red_capaya"
+    ],
+    [
+      "snowy_plum"
+    ],
+    [
+      "solind"
+    ],
+    [
+      "sweet_berries"
+    ],
+    [
+      "warped_mango"
+    ],
+    [
+      "wax_pear"
+    ],
+    [
+      "virana"
+    ]
+  ],
+  "rewards": {
+    "experience": 50
+  },
+  "sends_telemetry_event": true
+}

@@ -8,22 +8,20 @@
           "type": "minecraft:item",
           "functions": [
             {
-              "add": false,
+              "function": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "max": 2.0,
                 "min": 1.0
-              },
-              "function": "minecraft:set_count"
+              }
             },
             {
+              "function": "minecraft:looting_enchant",
               "count": {
                 "type": "minecraft:uniform",
                 "max": 1.0,
                 "min": 0.0
-              },
-              "enchantment": "minecraft:looting",
-              "function": "minecraft:enchanted_count_increase"
+              }
             }
           ],
           "name": "minecraft:mushroom_stem"
@@ -38,25 +36,23 @@
           "type": "minecraft:item",
           "functions": [
             {
-              "add": false,
+              "function": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "max": 1.0,
                 "min": 0.0
-              },
-              "function": "minecraft:set_count"
+              }
             },
             {
+              "function": "minecraft:looting_enchant",
               "count": {
                 "type": "minecraft:uniform",
                 "max": 1.0,
                 "min": 0.0
-              },
-              "enchantment": "minecraft:looting",
-              "function": "minecraft:enchanted_count_increase"
+              }
             }
           ],
-          "name": "barklings:brown_sporsimmon"
+          "name": "barklings:red_capaya"
         }
       ],
       "rolls": 1.0
@@ -68,25 +64,23 @@
           "type": "minecraft:item",
           "functions": [
             {
-              "add": false,
+              "function": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "max": 1.0,
                 "min": 0.0
-              },
-              "function": "minecraft:set_count"
+              }
             },
             {
+              "function": "minecraft:looting_enchant",
               "count": {
                 "type": "minecraft:uniform",
                 "max": 1.0,
                 "min": 0.0
-              },
-              "enchantment": "minecraft:looting",
-              "function": "minecraft:enchanted_count_increase"
+              }
             }
           ],
-          "name": "barklings:red_capaya"
+          "name": "barklings:brown_sporsimmon"
         }
       ],
       "rolls": 1.0
@@ -98,14 +92,9 @@
           "condition": "minecraft:killed_by_player"
         },
         {
-          "condition": "minecraft:random_chance_with_enchanted_bonus",
-          "enchanted_chance": {
-            "type": "minecraft:linear",
-            "base": 0.035,
-            "per_level_above_first": 0.01
-          },
-          "enchantment": "minecraft:looting",
-          "unenchanted_chance": 0.025
+          "condition": "minecraft:random_chance_with_looting",
+          "chance": 0.025,
+          "looting_multiplier": 0.01
         }
       ],
       "entries": [

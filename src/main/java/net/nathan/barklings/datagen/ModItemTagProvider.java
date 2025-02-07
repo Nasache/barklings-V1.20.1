@@ -60,12 +60,6 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(ItemTags.LEAVES)
                 .add(ModBlocks.GILDED_OAK_LEAVES.asItem());
 
-        //getOrCreateTagBuilder(ItemTags.RABBIT_FOOD)
-        //        .add(ModBlocks.CLOVER_CARPET.asItem());
-//
-        //getOrCreateTagBuilder(ItemTags.BEE_FOOD)
-        //        .add(ModBlocks.CLOVER_CARPET.asItem());
-
         getOrCreateTagBuilder(ItemTags.FLOWERS)
                 .add(ModBlocks.CLOVER_CARPET.asItem());
     }
