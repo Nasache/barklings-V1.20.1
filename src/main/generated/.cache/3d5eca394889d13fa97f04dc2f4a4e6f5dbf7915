@@ -1,4 +1,4 @@
-// 1.20.1	2025-02-06T16:27:41.936671	Barklings/Recipes
+// 1.20.1	2025-02-13T15:14:29.4564813	Barklings/Recipes
 f657e16a7e90bf0f0389ff7046f9ae651bb7f2d5 data\barklings\recipes\gilded_oak_stairs.json
 c41717dc536dc1273d844b49064b0b2e9c2699c3 data\barklings\recipes\gilded_oak_pressure_plate.json
 03d8b748f7a41da6d8a21b2446cc9d042e6aa71b data\barklings\advancements\recipes\transportation\gilded_oak_boat.json
@@ -23,8 +23,8 @@ b5d1d797f9c79f87e9550dd622b3a81f6eea0e37 data\barklings\advancements\recipes\red
 de564434b7d03b029487f13a09a1ffc7316b83ba data\barklings\recipes\stripped_gilded_oak_wood.json
 504086461221e42158f727a1bd06a67907ee9127 data\barklings\advancements\recipes\redstone\gilded_oak_fence_gate.json
 516235565ae8a0192d536b15d7283c90ee3f2fc1 data\barklings\recipes\gilded_oak_door.json
-6580e4d48a23e37d6d354bfff539ae89111e940a data\barklings\advancements\recipes\misc\living_lantern.json
 183b299a364cd8194a0f91dba3bb74fff146e466 data\barklings\recipes\lime_dye.json
+6580e4d48a23e37d6d354bfff539ae89111e940a data\barklings\advancements\recipes\misc\living_lantern.json
 6d383f816a792db12344ed2274d408634bd38220 data\barklings\advancements\recipes\building_blocks\stripped_gilded_oak_wood.json
 b54f5854661865e6c95d51da9af408c6dd7b0793 data\barklings\advancements\recipes\transportation\gilded_oak_chest_boat.json
 d7a1305abd0e5de13f1916104dd78303076bd2be data\barklings\recipes\gilded_oak_slab.json

@@ -63,7 +63,17 @@ public class BarklingModel extends SinglePartEntityModel<BarklingEntity> impleme
     @Override
     public void setAngles(BarklingEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
         this.getPart().traverse().forEach(ModelPart::resetTransform);
-        this.setHeadAngles(netHeadYaw, headPitch);
+
+        boolean isAdmiring = entity.getDataTracker().get(BarklingEntity.IS_ADMIRING);
+        float adjustedHeadPitch = isAdmiring ? 0.0f : headPitch;
+
+        this.setHeadAngles(netHeadYaw, adjustedHeadPitch);
+
+        float armSway = (MathHelper.cos(ageInTicks * 0.1F) + 1) * 0.05F;
+        float maxSwayOutwards = 0.15F;
+
+        this.body.getChild("arms").getChild("larm").roll = MathHelper.clamp(-armSway, -maxSwayOutwards, 0.0F);
+        this.body.getChild("arms").getChild("rarm").roll = MathHelper.clamp(armSway, 0.0F, maxSwayOutwards);
 
         this.animateMovement(BarklingAnimations.ANIM_BARKLING_WALK, limbSwing, limbSwingAmount, 2f, 2.5f);
         this.updateAnimation(entity.idleAnimationState, BarklingAnimations.ANIM_BARKLING_IDLE, ageInTicks, 1f);

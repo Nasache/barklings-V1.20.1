@@ -61,7 +61,7 @@ public class ModConfiguredFeatures {
                 BlockStateProvider.of(ModBlocks.GILDED_OAK_LOG),
                 new StraightTrunkPlacer(3, 4, 3),
                 BlockStateProvider.of(ModBlocks.GILDED_OAK_LEAVES),
-                new CherryFoliagePlacer(ConstantIntProvider.create(4), ConstantIntProvider.create(1), ConstantIntProvider.create(5),
+                new CherryFoliagePlacer(ConstantIntProvider.create(4), ConstantIntProvider.create(0), ConstantIntProvider.create(5),
                         0.25f, 0.5f, 0.5f, 0.25f),
                 new TwoLayersFeatureSize(1, 0, 1)).build());
 
